@@ -1,0 +1,175 @@
+:root {
+  --cyan: hsl(179, 62%, 43%);
+  --bright-yellow: hsl(71, 73%, 54%);
+  --light-gray: hsl(204, 43%, 93%);
+  --grayish-blue: hsl(218, 22%, 67%);
+
+  --base: 16px;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Karla', sans-serif;
+  font-size: var(--base);
+  background: var(--light-gray);
+  padding: 1rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: .5rem;
+  background: white;
+}
+
+.join-section {
+  padding: 1.5rem;
+}
+
+.join-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--cyan);
+  margin-bottom: 1rem;
+}
+
+.join-subtitle {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--bright-yellow);
+  margin-bottom: 1rem;
+}
+
+.join-description {
+  font-size: 14px;
+  color: var(--grayish-blue);
+  line-height: 2;
+}
+
+.bottom-sections {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.subscription-section {
+  padding: 1.5rem;
+  background: var(--cyan);
+}
+
+.subscription-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--light-gray);
+  margin-bottom: 1rem;
+}
+
+.subscription-price-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: .5rem;
+}
+
+.subscription-price {
+  color: var(--light-gray);
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.subscription-price-text {
+  color: hsla(204, 43%, 93%, 0.7);
+}
+
+.subscription-description {
+  color: var(--light-gray);
+  margin-bottom: 1.5rem;
+}
+
+.sign-up-button {
+  width: 100%;
+  border: none;
+  border-radius: .2rem;
+  padding: .8rem 1.5rem;
+  font-size: var(--base);
+  background: var(--bright-yellow);
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.description-section {
+  padding: 1.5rem;
+  background: hsla(179, 62%, 43%, 0.7);
+  border-radius: 0 0 .5rem .5rem;
+}
+
+.description-title {
+  color: var(--light-gray);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.description-list {
+  list-style: none;
+  color: hsla(204, 43%, 93%, 0.7);
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+
+  .bottom-sections {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .subscription-section {
+    border-radius: 0 0 0 .5rem;
+  }
+
+  .description-section {
+    border-radius: 0 0 .5rem 0;
+  }
+
+  .join-title,
+  .subscription-title,
+  .description-title {
+    font-size: 1.5rem;
+  }
+
+  .join-title{
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .join-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .join-description {
+    font-weight: bold;
+    max-width: 60ch;
+    margin-bottom: 1.5rem;
+  }
+
+  .sign-up-button {
+    margin-bottom: 1rem;
+  }
+
+}
